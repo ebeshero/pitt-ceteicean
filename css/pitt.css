@@ -4,3 +4,30 @@ tei-teiheader {
 tei-p,tei-ab {
   display:block;
 }
+tei-reg, tei-rdg{
+    display:none;
+}
+/* This inserts a carriage return before the tei-lb element. The \A indicates a line-feed character.
+ * Yes you could use a unicode character, too. Adding the white-space as a CSS value indicates that it's NOT to be ignored. 
+ * Because by default the line-feed will be ignored.
+ COMMENTED OUT B/C WE ADDED BEHAVIORS to CETEIcean's JavaScript. */
+/* tei-lb:before{
+white-space: pre;
+content: "\A"
+} */
+tei-unclear{
+    color:red;
+    text-emphasis-style: dot;
+    text-emphasis-position:under left;
+}
+tei-supplied:before{
+content:'['    
+}
+tei-supplied:after{
+content:']'    
+}
+/* Notice, you can't grab the square brackets when you try to copy and paste from the web browser, because the brackets are
+ * supplied by the CSS. It's like they're not really there!!! */
+ /* Here we'll want to use CETEIcean behaviors: custom styles you can add to your TEI elements. There's a simple syntax.
+  * You can write some JavaScript that looks like Python arrays... */
+  /* Hugh notes that JavaScript tends to be much more "anarchic" than Python. */

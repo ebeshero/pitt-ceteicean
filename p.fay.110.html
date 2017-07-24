@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <!--2017-07-24 ebb: Hugh says, don't worry about the validation errors in oXygen. He says oXygen doesn't understand HTML, that it only understands its XML syntax, so he prefers editing HTML in Atom. Note: this is NOT XML syntax. -->
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/pitt.css" media="screen" title="no title" charset="utf-8">
     <script src="js/CETEI.js" charset="utf-8"></script>
     <script type="text/javascript">
-      (new CETEI).getHTML5('p.fay.110.xml', function(data) {
+      var c = new CETEI();
+      c.addBehaviors({"handlers":{
+        "supplied": ["[","]"],
+        "lb": ["<br/>"]
+       }});
+       c.getHTML5('p.fay.110.xml', function(data) {
         document.getElementsByTagName("body")[0].appendChild(data);
       });
     </script>

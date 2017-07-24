@@ -20,12 +20,12 @@ tei-unclear{
     text-emphasis-style: dot;
     text-emphasis-position:under left;
 }
-tei-supplied:before{
+/*   tei-supplied:before{
 content:'['    
 }
 tei-supplied:after{
 content:']'    
-}
+}*/
 /* Notice, you can't grab the square brackets when you try to copy and paste from the web browser, because the brackets are
  * supplied by the CSS. It's like they're not really there!!! */
  /* Here we'll want to use CETEIcean behaviors: custom styles you can add to your TEI elements. There's a simple syntax.
